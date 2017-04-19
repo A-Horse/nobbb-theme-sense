@@ -1,0 +1,43 @@
+@import "./_common";
+@import "./_minix";
+@import "./_variable";
+
+@import "./widget/slide-tag";
+@import "./widget/article-list";
+@import "./widget/paging";
+@import "./widget/footer";
+@import "./widget/container";
+
+
+html {
+    height: auto;
+}
+
+body {
+    @include clearfix;
+}
+
+
+
+
+.yue-song-font .main-wrapper h1 {
+    font-family: $font-title;
+}
+
+
+.main-wrapper {
+    @include clearfix;
+    position: relative;
+    padding: 0 1rem 1rem;
+    margin-bottom: 1rem;
+    h1 {
+        color: white;
+        text-shadow: 0 0 1px white;
+        
+    }
+}
+
+
+footer {
+    margin-top: 1.5rem;
+}

@@ -1,0 +1,37 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+  <head>
+    <meta charset="utf-8">
+    <title>
+      <%= title %>
+    </title>
+    <%- include('widget/head.ejs'); %>
+
+    <link rel="stylesheet" href="/static/css/allarticles.css">
+
+
+  </head>
+
+  <body>
+
+    <%- include('widget/slide-tag.ejs', {type: 'slide-tag-index'}); %>
+
+    <div class="main-wrapper">
+      <h1><%= title %></h1>
+
+      <div>
+
+        <%- include('widget/article-list.ejs'); %>
+
+
+      </div>
+
+      <%- include('widget/footer.ejs', {type: 'footer-category'}); %>
+
+      
+    </div>
+    <script src="/static/js/allarticles.bundle.js"></script>
+  </body>
+
+</html>
