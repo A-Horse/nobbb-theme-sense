@@ -1,0 +1,6 @@
+<div>{{category.name}}</div>
+<ul>
+  <li *ngFor="let article of category.articles">
+    <a routerLink="{{article.id}}">{{article.title}}</a>
+  </li>
+</ul>

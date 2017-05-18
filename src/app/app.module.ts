@@ -6,6 +6,7 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { HomePage }   from './home.component';
 import { CategorysPage }      from './categorys.component';
+import { CategoryPage } from './category.component';
 
 import { AppRoutingModule } from './app.routing.modules';
 
@@ -13,6 +14,7 @@ import { AppRoutingModule } from './app.routing.modules';
   declarations: [
     AppComponent,
     HomePage,
+    CategoryPage,
     CategorysPage
   ],
   imports: [

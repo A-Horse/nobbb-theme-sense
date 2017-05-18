@@ -8,13 +8,15 @@ import 'rxjs/add/operator/toPromise';
   styleUrls: [ './categorys.component.css' ]
 })
 export class CategorysPage implements OnInit {
-
-
   constructor(private http: Http) { }
 
+  categorys = [];
+
   ngOnInit(): void {
-    this.http.get('/build/categorys.json')
-          .toPromise()
-          .then(response => console.log(response))
+    this.http.get('http://127.0.0.1:8077/categorys.json')
+        .toPromise()
+        .then(response => {
+          this.categorys = response.json();
+        });
   }
 }
