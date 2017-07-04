@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { HomePage }   from './home.component';
 import { CategorysPage }      from './categorys.component';
 import { CategoryPage } from './category.component';
+import { ArticlePage } from './article.component';
 
 import { AppRoutingModule } from './app.routing.modules';
 
@@ -15,7 +16,8 @@ import { AppRoutingModule } from './app.routing.modules';
     AppComponent,
     HomePage,
     CategoryPage,
-    CategorysPage
+    CategorysPage,
+    ArticlePage
   ],
   imports: [
     BrowserModule,

@@ -13,7 +13,7 @@ export class CategorysPage implements OnInit {
   categorys = [];
 
   ngOnInit(): void {
-    this.http.get('http://127.0.0.1:8077/categorys.json')
+    this.http.get('/categorys.json')
         .toPromise()
         .then(response => {
           this.categorys = response.json();
