@@ -4,13 +4,14 @@ import { Headers, Http } from '@angular/http';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
 import 'rxjs/add/operator/toPromise';
+import { API_ENDPOINT } from '../../constants';
 
 @Component({
-  selector: 'category',
+  selector: 'app-category',
   templateUrl: './category.component.html',
   styleUrls: ['./category.component.css']
 })
-export class CategoryPage implements OnInit {
+export class CategoryComponent implements OnInit {
   constructor(
     private http: Http,
     private route: ActivatedRoute,
@@ -23,7 +24,7 @@ export class CategoryPage implements OnInit {
     this.route.params
       .switchMap((params: Params) =>
         this.http
-          .get(`${params['categoryName']}/index.json`)
+          .get(API_ENDPOINT + `/${params['categoryName']}/index.json`)
           .toPromise()
           .then(response => response.json())
       )

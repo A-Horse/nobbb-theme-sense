@@ -1,20 +1,22 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-
-import { HomePage } from './home.component';
-import { CategorysPage } from './categorys.component';
-import { CategoryPage } from './category.component';
-import { ArticlePage } from './article.component';
+import { CategoryListComponent } from './category-list/category-list.component';
+import { CategoryComponent } from './category/category.component';
+import { ArticleComponent } from './article/article.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
-  { path: '',  component:  HomePage },
-  { path: 'categorys', component: CategorysPage },
-  { path: 'category/:categoryName', component: CategoryPage },
-  { path: 'category/:categoryName/:articleName', component: ArticlePage }
+  { path: '', component: HomeComponent },
+  { path: 'categorys', component: CategoryListComponent },
+  { path: 'category/:categoryName', component: CategoryComponent },
+  {
+    path: 'category/:categoryName/article/:articleName',
+    component: ArticleComponent
+  }
 ];
 
 @NgModule({
-  imports: [ RouterModule.forRoot(routes) ],
-  exports: [ RouterModule ]
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
 })
 export class AppRoutingModule {}
